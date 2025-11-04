@@ -3,6 +3,24 @@ import pandas as pd
 import numpy as np
 import os
 
+# SeriesData format:
+""" 
+[
+    { # Series 0000
+        "train": [
+            [1], [2], [3], ...
+        ]
+        "test": "train": [
+            [1], [2], [3], ...
+        ]
+    },
+    { # Series 0001
+        ...
+    },
+    ...
+]
+"""
+
 
 class SeriesData(TypedDict):
     train: List[List[float]]
